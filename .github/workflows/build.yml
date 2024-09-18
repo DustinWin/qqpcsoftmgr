@@ -23,15 +23,15 @@ jobs:
           Set-WinUILanguageOverride zh-CN
           $env:LANG = 'zh-CN'
 
-      - name: Install `QQPCMgr` and running 30s
+      - name: Install `QQPCMgr` and running 60s
         run: |
           .\PCMgr_Setup_15_6_23123_201.exe /S
-          Start-Sleep -Seconds 30
+          Start-Sleep -Seconds 60
 
-      - name: Running `QQPCSoftMgr` 60s
+      - name: Running `QQPCSoftMgr` 120
         run: |
           "%PROGRAMFILES(X86)%\Tencent\QQPCMgr\15.6.23123.201\QQPCSoftMgr.exe"
-          Start-Sleep -Seconds 60
+          Start-Sleep -Seconds 120
 
       - name: Copy files
         run: |
