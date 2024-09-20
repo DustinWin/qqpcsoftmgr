@@ -2,7 +2,7 @@ name: Update QQPCSoftMgr
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 18 * * 5"
+    - cron: "0 10 * * 5"
   push:
     branches:
       - main
@@ -28,7 +28,7 @@ jobs:
           .\PCMgr_Setup_15_6_23123_201.exe /S
           Start-Sleep -Seconds 60
 
-      - name: Running `QQPCSoftMgr` 120
+      - name: Open `QQPCSoftMgr` and running 120s
         run: |
           "%PROGRAMFILES(X86)%\Tencent\QQPCMgr\15.6.23123.201\QQPCSoftMgr.exe"
           Start-Sleep -Seconds 120
